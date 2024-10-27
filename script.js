@@ -122,5 +122,44 @@ window.addEventListener('load', () => {
     calculateOutput();
 });
 
+// Function to render the current neural network equation
+function updateNeuralEquation() {
+    const inputVal = parseFloat(input1.value);
+    
+    // Get current weights from the weight sliders
+    const w1 = weightsObj.layer1;
+    const w2 = weightsObj.layer2;
+    const w3 = weightsObj.layer3;
+    const outputWeights = weightsObj.output;
+
+    // Create LaTeX representation using matrices
+    const equation = `
+    \\begin{aligned}
+    &\\text{Input:} \\quad x = ${inputVal} \\\\
+    &\\text{Weight Matrix for Layer 1:} \\quad W_1 = \\begin{bmatrix} ${w1[0]} & ${w1[1]} & ${w1[2]} & ${w1[3]} \\end{bmatrix} \\\\
+    &\\text{Hidden Layer 1 Output:} \\quad h_1 = x \\times W_1 = \\begin{bmatrix} (${inputVal} \\times ${w1[0]}) & (${inputVal} \\times ${w1[1]}) & (${inputVal} \\times ${w1[2]}) & (${inputVal} \\times ${w1[3]}) \\end{bmatrix} \\\\
+    &\\text{Weight Matrix for Layer 2:} \\quad W_2 = \\begin{bmatrix} ${w2[0]} & ${w2[1]} & ${w2[2]} & ${w2[3]} \\end{bmatrix} \\\\
+    &\\text{Hidden Layer 2 Output:} \\quad h_2 = h_1 \\times W_2 = \\begin{bmatrix} h_{1_1} \\times ${w2[0]}, h_{1_2} \\times ${w2[1]}, h_{1_3} \\times ${w2[2]}, h_{1_4} \\times ${w2[3]} \\end{bmatrix} \\\\
+    &\\text{Weight Matrix for Layer 3:} \\quad W_3 = \\begin{bmatrix} ${w3[0]} & ${w3[1]} & ${w3[2]} & ${w3[3]} \\end{bmatrix} \\\\
+    &\\text{Hidden Layer 3 Output:} \\quad h_3 = h_2 \\times W_3 = \\begin{bmatrix} h_{2_1} \\times ${w3[0]}, h_{2_2} \\times ${w3[1]}, h_{2_3} \\times ${w3[2]}, h_{2_4} \\times ${w3[3]} \\end{bmatrix} \\\\
+    &\\text{Output Layer:} \\quad y = h_3 \\times W_{output} = \\begin{bmatrix} h_{3_1} \\times ${outputWeights[0]} & h_{3_2} \\times ${outputWeights[1]} & h_{3_3} \\times ${outputWeights[2]} & h_{3_4} \\times ${outputWeights[3]} \\end{bmatrix} \\\\
+    \\end{aligned}
+    `;
+
+    // Update the LaTeX code inside the #neural-equation div
+    document.getElementById('neural-equation').innerHTML = `$$${equation}$$`;
+
+    // Re-render the MathJax output
+    MathJax.typeset();
+}
+
+
+// Call updateNeuralEquation() after any changes in input or weights
+input1.addEventListener('input', updateNeuralEquation);
+weights.forEach(weight => weight.addEventListener('input', updateNeuralEquation));
+
+// Initial equation rendering
+updateNeuralEquation();
+
 // Redraw connections on window resize to maintain layout
 window.addEventListener('resize', drawConnections);
