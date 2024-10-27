@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Network Visualization</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
     <h1>Neural Network Visualization Tool</h1>
+
     <div class="network-container">
         <!-- SVG for connections -->
         <svg class="connections"></svg>
@@ -30,22 +30,22 @@
         <div class="layer hidden-layer" id="hidden-layer-1">
             <div class="node" id="h1-n1">
                 <label>H1 N1</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="1">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="1">
                 <span class="weight-value" id="w1-1">1</span>
             </div>
             <div class="node" id="h1-n2">
                 <label>H1 N2</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="2">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="2">
                 <span class="weight-value" id="w1-2">1</span>
             </div>
             <div class="node" id="h1-n3">
                 <label>H1 N3</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="3">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="3">
                 <span class="weight-value" id="w1-3">1</span>
             </div>
             <div class="node" id="h1-n4">
                 <label>H1 N4</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="4">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="1" data-neuron="4">
                 <span class="weight-value" id="w1-4">1</span>
             </div>
         </div>
@@ -54,22 +54,22 @@
         <div class="layer hidden-layer" id="hidden-layer-2">
             <div class="node" id="h2-n1">
                 <label>H2 N1</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="1">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="1">
                 <span class="weight-value" id="w2-1">1</span>
             </div>
             <div class="node" id="h2-n2">
                 <label>H2 N2</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="2">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="2">
                 <span class="weight-value" id="w2-2">1</span>
             </div>
             <div class="node" id="h2-n3">
                 <label>H2 N3</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="3">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="3">
                 <span class="weight-value" id="w2-3">1</span>
             </div>
             <div class="node" id="h2-n4">
                 <label>H2 N4</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="4">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="2" data-neuron="4">
                 <span class="weight-value" id="w2-4">1</span>
             </div>
         </div>
@@ -78,22 +78,22 @@
         <div class="layer hidden-layer" id="hidden-layer-3">
             <div class="node" id="h3-n1">
                 <label>H3 N1</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="1">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="1">
                 <span class="weight-value" id="w3-1">1</span>
             </div>
             <div class="node" id="h3-n2">
                 <label>H3 N2</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="2">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="2">
                 <span class="weight-value" id="w3-2">1</span>
             </div>
             <div class="node" id="h3-n3">
                 <label>H3 N3</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="3">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="3">
                 <span class="weight-value" id="w3-3">1</span>
             </div>
             <div class="node" id="h3-n4">
                 <label>H3 N4</label>
-                <input type="range" min="-5" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="4">
+                <input type="range" min="-3" max="5" step="0.1" value="1" class="weight" data-layer="3" data-neuron="4">
                 <span class="weight-value" id="w3-4">1</span>
             </div>
         </div>
@@ -113,81 +113,72 @@
             In the age of AI, many view artificial intelligence systems as mysterious, almost magical. However, behind the curtain of these advanced technologies lie mathematical principles that allow machines to learn, make decisions, and improve their predictions over time. Neural networks, a key component of many AI tools, aren't magic—they're structured algorithms inspired by the way the human brain works, processing data in a very logical, mathematical way.
         </p>
         <p>
-            This neural network visualization tool gives you a hands-on experience with a simplified version of these systems. Think of each neuron (node) in a network as a decision-maker, with "weights" that influence how much it contributes to the overall output. For example H2N2 is a node in the second hidden layer. As a sidenote, HN coresponds to the hidden layer N. By adjusting these weights, you change how the network behaves—much like tweaking settings on a machine to get the outcome you want.
+            This neural network visualization tool gives you a hands-on experience with a simplified version of these systems. Think of each neuron (node) in a network as a decision-maker, with "weights" that influence how much it contributes to the overall output. For example, H2N2 is a node in the second hidden layer. By adjusting these weights, you change how the network behaves—much like tweaking settings on a machine to get the outcome you want.
         </p>
         <p>
-            For example, try entering an input of 3 and see if you can manipulate the weights to produce an output of 64. By experimenting, you’ll see how these simple changes impact the network’s final decision, helping to demystify the workings of AI and showing you the logic behind the output. 
+            For example, try entering an input of 3 and see if you can manipulate the weights to produce an output of 64. By experimenting, you’ll see how these simple changes impact the network’s final decision, helping to demystify the workings of AI and showing you the logic behind the output.
         </p>
     </section>
-    
+
     <section class="math-explanation">
         <h2>Where Is The Math?</h2>
         <p>
             At the heart of neural networks are mathematical concepts that help process and transform data. One of the key ideas is linear algebra, which is used to move and manipulate data as it passes through the layers of neurons. Each connection between neurons is assigned a "weight," which affects the input data and, in turn, influences the network's output.
         </p>
         <h3>Current Neural Network Equation</h3>
-    <div id="neural-equation">
-        $$\text{Equation will appear here...}$$
-    </div>
+        <div id="neural-equation">
+            $$\text{Equation will appear here...}$$
+        </div>
         <p>
             In the equation above, feel free to change the weights of certain nodes to see how the equation of this neural network changes in real time. To make predictions more accurate, neural networks use a process called gradient descent. After making an initial prediction, the network calculates how far off it is from the correct answer—a difference known as the loss. Through gradient descent, the network adjusts the weights to minimize this loss, gradually improving with each iteration. This process repeats until the network becomes good at making predictions.
         </p>
-        <img src="assets/gradient-descent.png" alt="Description of the image" width="500">
+        <img src="assets/gradient-descent.png" alt="Gradient Descent Illustration" width="500">
         <p>
             Another key concept is the activation function, which helps the network learn complex patterns. Simple models wouldn’t be able to solve intricate problems without these functions. Common activation functions include ReLU (Rectified Linear Unit), which introduces non-linearity and allows the network to tackle more complicated tasks, and sigmoid, which is used in models where outputs need to be between 0 and 1.
         </p>
-        
         <p>
             Lastly, backpropagation plays a crucial role in learning. This process uses calculus (specifically the chain rule) to determine how much each neuron contributed to the final error. By adjusting the weights accordingly, the network learns from its mistakes and gradually improves its accuracy.
         </p>
-        <img src="assets/back-propagation.png" alt="Description of the image" width="500">
-        
+        <img src="assets/back-propagation.png" alt="Backpropagation Illustration" width="500">
     </section>
-    
+
     <section class="types">
         <h2>Types of Neural Networks</h2>
-        <p>
-            Neural networks aren’t all the same. They come in various forms, each tailored for specific types of problems:
-        <p>
-
-            <ul>
-                <li><strong>Feedforward Neural Networks (FNNs)</strong>: These are the simplest types of networks where data flows in one direction—from input to output—without looping back. They are typically used for straightforward tasks like basic pattern recognition.</li>
-                <li><strong>Convolutional Neural Networks (CNNs)</strong>: Designed specifically for image data, CNNs are excellent at detecting patterns such as edges, textures, or shapes in images. They're widely used in fields like facial recognition and medical imaging.</li>
-                <li><strong>Recurrent Neural Networks (RNNs)</strong>: These networks excel at handling sequences of data, such as text, speech, or time-series information. RNNs can remember previous steps in the sequence, making them powerful for tasks like language translation or stock market predictions.</li>
-            </ul>
+        <p>Neural networks come in various forms, each tailored for specific types of problems:</p>
+        <ul>
+            <li><strong>Feedforward Neural Networks (FNNs)</strong>: These are the simplest types of networks where data flows in one direction—from input to output—without looping back. They are typically used for straightforward tasks like basic pattern recognition.</li>
+            <li><strong>Convolutional Neural Networks (CNNs)</strong>: Designed specifically for image data, CNNs are excellent at detecting patterns such as edges, textures, or shapes in images. They're widely used in fields like facial recognition and medical imaging.</li>
+            <li><strong>Recurrent Neural Networks (RNNs)</strong>: These networks excel at handling sequences of data, such as text, speech, or time-series information. RNNs can remember previous steps in the sequence, making them powerful for tasks like language translation or stock market predictions.</li>
+        </ul>
     </section>
-    
+
     <section class="bias">
         <h2>What is Bias in Neural Networks?</h2>
         <p>
             Along with weights, neural networks also use biases. A bias is an additional number added to the neuron's output to help the model learn more flexible patterns. Think of biases as extra fine-tuning knobs that allow the network to adjust its predictions more precisely. They help ensure that the network doesn’t get stuck making overly simple predictions and can adapt to more complex data scenarios.
         </p>
     </section>
-    
+
     <section class="epochs">
         <h2>Epochs, Batch Size, and Iterations</h2>
-        <p>
-            There are three key terms you need to know when training a neural network:
-        </p>
+        <p>There are three key terms you need to know when training a neural network:</p>
         <ul>
             <li><strong>Epoch</strong>: One complete cycle where the entire dataset passes through the network.</li>
             <li><strong>Batch Size</strong>: Instead of feeding all data at once, it's broken into smaller chunks (batches). After each batch, the weights get updated, making training more efficient.</li>
             <li><strong>Iteration</strong>: This refers to one update of the network's weights. Since a full epoch can involve multiple batches, there are multiple iterations within a single epoch.</li>
         </ul>
     </section>
-    
+
     <section class="overfitting">
         <h2>Overfitting and Regularization</h2>
         <p>
             One common problem with neural networks is overfitting. This happens when the model becomes too good at predicting based on the training data, but it performs poorly on new, unseen data. It’s like memorizing answers to a test without understanding the concepts behind them. To prevent overfitting, techniques like Dropout (randomly turning off neurons during training) and L2 Regularization (which discourages large weight values) are used to make the model more general and robust.
         </p>
     </section>
-    
+
     <section class="evaluation">
         <h2>Evaluation Metrics</h2>
-        <p>
-            Once a neural network is trained, it’s important to evaluate how well it performs. Several metrics help us do that:
-        </p>
+        <p>Once a neural network is trained, it’s important to evaluate how well it performs. Several metrics help us do that:</p>
         <ul>
             <li><strong>Accuracy</strong>: The percentage of correct predictions.</li>
             <li><strong>Precision</strong>: The ratio of true positive predictions to all positive predictions made by the network.</li>
@@ -195,30 +186,21 @@
             <li><strong>Mean Squared Error (MSE)</strong>: Common in regression tasks, MSE calculates how far off the network’s predictions are from the true values.</li>
         </ul>
     </section>
-    
+
     <section class="learning-curves">
         <h2>Learning Curves</h2>
         <p>
             Learning curves are visual tools that help track a network’s progress during training. They plot the network’s performance on both the training data and a separate validation set, allowing you to see if the model is improving or if it’s overfitting. A good learning curve shows a decreasing loss over time for both the training and validation sets. A neural network is typically done training on data once the learning curve converges.
         </p>
-        <img src="assets/learning-curve.png" alt="Description of the image" width="500">
+        <img src="assets/learning-curve.png" alt="Learning Curve Illustration" width="500">
     </section>
-    
 
-    
     <section class="hyperparameters">
         <h2>Hyperparameter Tuning</h2>
         <p>
             The performance of a neural network can often be enhanced by adjusting hyperparameters, such as the learning rate, the number of layers, or the number of neurons in each layer. These parameters are set before training begins, and tuning them correctly can make a big difference in how well the network performs. Techniques like grid search (testing multiple parameter combinations) and random search (sampling a random subset of possible hyperparameters) are common ways to find the best settings for a network.
         </p>
     </section>
-    
-    
-    
-   
-    
-
-    
 
     <script src="script.js"></script>
 </body>
